@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form class="form" method = "post">{% csrf_token %}
+    <label for="options">Choose a Option:</label>
+<select id="options" name="options">
+    <option value="CreateDir">Create Directory</option>
+    <option value="DeleteDir">Delete Directory</option>
+    <option value="ChangeDir">Change Directory</option>
+</select> <br>
+    <label for="Directory Path">Directory Path:</label>  <input type="text" name="directorypath"> <br>
+    <label for="Directory Name">Directory Name:</label>  <input type="text" name="directoryname"> <br>
+    <button type="submit" name="submit">Submit</button>
+</form>  
+{% if message %}
+	{{ message }}
+{% endif %}
+</body> 
